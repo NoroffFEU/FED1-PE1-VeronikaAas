@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a blogpost</title>
+  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="#">
+  <link rel="Icon" type="png" sizes="16x16" href="/assets/logo_cocktails.png">
+</head>
+<body>
+    <form id="createPost">
+        <div class="username">
+            <label for="">Title</label>
+            <input class="form-control" type="text" name="title" required 
+            maxlength="280" minlength="1" title="This is where you write the title of your blogpost.">
+        </div>
+
+        <div class="body">
+            <label for="">Body</label>
+            <textarea class="form-control" type="text" name="body" required 
+            maxlength="1000" title="This is where you write the body of your blogpost."></textarea>
+        </div>
+
+        <div class="tags">
+            <label for="">Tags</label>
+            <input class="form-control" type="text" name="tags">
+        </div>
+
+        <div class="media">
+            <label for="">Media</label>
+            <input class="form-control" type="url" name="media" required>
+        </div>
+        
+        <button class="btn btn-success">Create post</button>
+
+    </form>
+</body>

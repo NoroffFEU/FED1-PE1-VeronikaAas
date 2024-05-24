@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="common.css">
+  <link rel="Icon" type="png" sizes="16x16" href="/assets/logo_cocktails.png">
+</head>
+<body>
+    <main class="flex-grow-1 bg-dark text-light">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-nd-6">
+                    <form id="loginForm">
+                        <div class="form group mb-3"></div>
+                            <label for="">Email</label>
+                            <input class="form-control" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Please use your student/employer email from Noroff. Example: abc123@stud.noroff.no">
+                        </div>
+                        
+                        <div class="form group mb-3">
+                            <label for="">Password</label>
+                            <input class="form-control" type="password" name="password" required minlength="8">
+                        </div>
+
+                        <button class="btn btn-success">Login</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>

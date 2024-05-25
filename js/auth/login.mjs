@@ -18,11 +18,12 @@ export async function login(profile)  {
 
     const result = await response.json();
 
-    const { acessToken, ...account} = result.data;
-    storage.save("token", acessToken)
-    storage.save("account", account)
+    const { accessToken, ...account} = result.data;
+    storage.save("token", accessToken);
+    storage.save("account", account);
+    console.log(accessToken);
 
-    alert("Your are now logged in")
+    alert("Your are now logged in");
 
     location.reload();
 }

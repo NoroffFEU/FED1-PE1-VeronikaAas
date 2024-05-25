@@ -1,4 +1,3 @@
-export async function updatePost(id) {}
 
 import { API_BASE_URL } from "../constants.mjs";
 import { authFetch } from "../api/authFetch.mjs";

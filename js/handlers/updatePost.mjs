@@ -15,7 +15,7 @@ export async function setUpdatePostListener () {
         form.body.value = post.body;
         form.tags.value = post.tags;
         form.media.value = post.media;
-        button.disabled = false;
+        button.disabled = true;
 
     }
 

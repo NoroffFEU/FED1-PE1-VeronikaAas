@@ -2,6 +2,7 @@ import { createPost } from "../post/create.mjs";
 
 export function setCreatePostListener () {
     const form = document.querySelector("#createPost");
+    
 
     if (form) {
         form.addEventListener("submit", (event) => {
@@ -17,8 +18,7 @@ export function setCreatePostListener () {
             const postData = {
                 title: post.title,
                 media: mediaAsObject,
-                ingredients: post.ingredients,
-                direction: post.direction,
+                body: post.body,
                 tags: tagsAsArray
             }
     

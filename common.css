@@ -1,82 +1,54 @@
-.logo {
-    width: 15%;
-    height: 15%;
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #F7E7D8; 
 }
 
-header {
+.logoimg {
+    width: 15%;
+    height: auto;
+    display: inline-block;
+}
+
+.logoimg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.menu {
+    background-color: #F7E7D8;
+    flex-grow: 1;
+}
+
+.menu ul {
+    list-style-type: none;
     font-size: 1.5rem;
-    font-family: gluten, sans-serif;
+    font-family: 'Gluten', sans-serif; 
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: 1%;
+    justify-content: flex-end; 
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #BF8069;
 }
 
 body {
     background-color: #F7E7D8;
-}
-
-.search-box {
-    width: 600px;
-    background: fff;
-    margin: 200px, auto, 0;
-    border-radius: 5px;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-input {
-    flex: 1;
-    height: 50px;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-button {
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-}
-
-button .fa-solid {
-    width: 25px;
-    color: #555;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-::placeholder {
-    color: #555;
-}
-
-.result-box {
-    max-height: 300px;
-    overflow-y: scroll;
-}
-
-.result-box ul {
-    border-top: 1px solid #999;
-    padding: 15px 10px;
-}
-
-.result-box li {
-    list-style: none;
-    border-radius: 3px;
-    padding: 15px 10px;
-    cursor: pointer;
-}
-
-.result-box li:hover {
-    background: #e9f3ff;
-
 }
 
 @media screen and (max-width: 600px) {

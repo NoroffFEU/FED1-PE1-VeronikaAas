@@ -1,10 +1,8 @@
 export async function updatePost(id) {}
 
-import { API } from "../constants.mjs";
+import { API_BASE_URL } from "../constants.mjs";
 import { authFetch } from "../api/authFetch.mjs";
 
-const API_ENDPOINT = API.API_ENDPOINT_BLOG_POSTS + API.API_ENDPOINT_NAME;
-const API_BASE_URL = API.API_BASE_URL;
 const method = "put";
 
 export async function updatePost(postData) {

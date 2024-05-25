@@ -18,9 +18,9 @@ export async function login(profile)  {
 
     const result = await response.json();
 
-    const { acessToken, ...profile} = result.data;
+    const { acessToken, ...account} = result.data;
     storage.save("token", acessToken)
-    storage.save("profile", profile)
+    storage.save("account", account)
 
     alert("Your are now logged in")
 

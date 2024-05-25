@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="Icon" type="png" sizes="16x16" href="/assets/logo_cocktails.png">
+  <link rel="Icon" type="png" sizes="16x16" href="/assets/Element1cc.png">
 </head>
 <header>
     <div class="header">
         <div class="logoimg">
             <a href="/posts/index.html"> 
-                <img src="/assets/logo_cocktails.png" alt="logo of the company">
+                <img src="/assets/Element1cc.png" alt="logo of the company">
             </a>
         </div>
         <nav class="menu">
@@ -24,11 +24,13 @@
                 <li><a href="#cupcakes">Cupcakes</a></li>
                 <li><a href="#cocktails">Cocktails</a></li>
                 <li><a href="#holiday-season">Holiday Season</a></li>
+                <li><a href="#" id="logoutButton">Log out</a></li>
             </ul>
         </nav>
     </div>
 </header>
 <body>
+    <h1>Write a new blogpost!</h1>
     <div class="createContainer">
     <form id="createPost">
         <div class="username">
@@ -59,14 +61,13 @@
             <input class="form-control" id="mediaURL" type="url" name="mediaURL" required title="This is where you put in your image url.">
         </div>
         
-        <button id="loginButton" class="btn btn-success">Create post</button>
+        <button id="createButton" class="btn btn-success">Create post</button>
     </form>
     </div>
 </body>
 <footer>
     <nav class="footer">
         <ul>
-            <li><a href="#">Log in here</a></li>
             <li><a href="#">Terms and Condition</a></li>
             <li>Any feedback? Would love to hear from you, email me at: candc@live.no</li>
         </ul>

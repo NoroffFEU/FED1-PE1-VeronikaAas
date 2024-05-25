@@ -1,11 +1,5 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Gluten', sans-serif;
-}
-
 body {
+    font-family: "gluten", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -14,7 +8,6 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #F7E7D8;
     padding: 20px;
 }
@@ -41,7 +34,6 @@ header {
 
 .menu li {
     margin: 0 15px;
-    wrap: wrap;
 }
 
 .menu a {

@@ -17,7 +17,8 @@ export function setCreatePostListener () {
             const postData = {
                 title: post.title,
                 media: mediaAsObject,
-                body: post.body,
+                ingredients: post.ingredients,
+                direction: post.direction,
                 tags: tagsAsArray
             }
     

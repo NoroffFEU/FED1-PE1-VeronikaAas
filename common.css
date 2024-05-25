@@ -47,6 +47,35 @@
     background-color: #BF8069;
 }
 
+.footer {
+    background-color: #BF8069;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer ul {
+    list-style-type: none;
+    font-size: 1rem;
+    font-family: 'Gluten', sans-serif;
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    justify-content: space-between;
+}
+
+.footer a:hover {
+    background-color: #F7E7D8;
+    cursor: pointer;
+}
+
 body {
     background-color: #F7E7D8;
 }

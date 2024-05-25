@@ -3,13 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit a post</title>
-  <link rel="stylesheet" href="/common.css">
-  <script src="/js/index.mjs" defer type="module"></script>
+  <title>Blog editing page</title>
+  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="#">
+  <script type="module" src="/js/index.mjs" defer></script>
   <link rel="Icon" type="png" sizes="16x16" href="/assets/logo_cocktails.png">
 </head>
 <body>
+    <form id="editPost">
+        <div class="username">
+            <label for="">Title</label>
+            <input class="form-control" type="text" name="title" required 
+            maxlength="280" minlength="1" title="This is where you write the title of your blogpost.">
+        </div>
 
-    
+        <div class="body">
+            <label for="">Body</label>
+            <textarea class="form-control" type="text" name="body" required 
+            maxlength="1000" title="This is where you write the body of your blogpost."></textarea>
+        </div>
+
+        <div class="tags">
+            <label for="">Tags</label>
+            <input class="form-control" type="text" name="tags">
+        </div>
+
+        <div class="media">
+            <label for="">Media</label>
+            <input class="form-control" type="url" name="media" required>
+        </div>
+        
+        <button class="btn btn-success">Update post</button>
+
+    </form>
 </body>
-</html>

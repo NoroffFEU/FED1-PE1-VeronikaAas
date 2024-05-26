@@ -32,7 +32,7 @@
 .loginForm {
     width: 50%;
     background-color: #BF8069;
-    padding: 20px;
+    padding: 5%;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;
@@ -45,7 +45,7 @@
 .registerForm {
     width: 50%;
     background-color: #BF8069;
-    padding: 20px;
+    padding: 5%;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;
@@ -103,6 +103,7 @@ textarea.form-control {
     background-color: #F2C4B3;
     color: black;
     border: none;
+    margin: 20px;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;

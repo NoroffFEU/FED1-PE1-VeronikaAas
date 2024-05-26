@@ -2,6 +2,7 @@ import { authFetch } from "../js/api/authFetch.mjs";
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
 import { getPosts } from "../js/post/read.mjs";
 
+
 // Extract query parameter 'id' from the URL
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);

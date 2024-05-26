@@ -21,10 +21,9 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#cupcakes">Cupcakes</a></li>
-                <li><a href="#cocktails">Cocktails</a></li>
-                <li><a href="#holiday-season">Holiday Season</a></li>
-                <li><a href="#" id="logoutButton">Log out</a></li>
+                <li><a href="/postedit/index.html">Edit a post</a></li>
+                <li><a href="/post/index.html">Create a new post</a></li>
+                <li><a href="/posts/index.html" id="logoutButton">Log out</a></li>
             </ul>
         </nav>
     </div>
@@ -39,16 +38,10 @@
             maxlength="280" minlength="1" title="This is where you write the title of your blogpost.">
         </div>
 
-        <div class="ingredients">
-            <label for="">Ingredients</label>
-            <textarea class="form-control" id="ingredients" type="text" name="ingredients" required 
-            maxlength="1000" title="This is where you write the ingrediens."></textarea>
-        </div>
-
-        <div class="direction">
-            <label for="">Direction</label>
-            <textarea class="form-control" id="direction" type="text" name="direction" required 
-            maxlength="10000" title="This is where you write the direction."></textarea>
+        <div class="body">
+            <label for="">Ingredients and direction</label>
+            <textarea class="form-control" id="body" type="text" name="body" required 
+            maxlength="100000" title="This is where you write the ingredients and direction."></textarea>
         </div>
 
         <div class="tags">
@@ -68,7 +61,7 @@
 <footer>
     <nav class="footer">
         <ul>
-            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="/terms/termsCon.html">Terms and Condition</a></li>
             <li>Any feedback? Would love to hear from you, email me at: candc@live.no</li>
         </ul>
     </nav>

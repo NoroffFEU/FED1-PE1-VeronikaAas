@@ -55,6 +55,19 @@
     align-items: center;
 }
 
+.editPost {
+    width: 50%;
+    background-color: #BF8069;
+    padding: 20px;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .form-group {
     width: 100%;
     margin-bottom: 15px;

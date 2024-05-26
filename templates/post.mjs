@@ -22,8 +22,7 @@ const fetchAndDisplayPost = async (postId) => {
     if (fetchInfo.data) {
       const mediaURL = document.querySelector(".mediaURL");
       const username = document.querySelector(".username");
-      const ingredients = document.getElementById("ingredients");
-      const direction = document.getElementById("direction");
+      const body = document.querySelector(".body");
 
       if (fetchInfo.data.mediaURL) {
         mediaURL.src = fetchInfo.data.mediaURL.url;
@@ -31,8 +30,7 @@ const fetchAndDisplayPost = async (postId) => {
       }
 
       username.innerText = fetchInfo.data.title || "No title";
-      ingredients.innerText = fetchInfo.data.body || "No ingredients";
-      direction.innerText = fetchInfo.data.body || "No direction";
+      body.innerText = fetchInfo.data.body || "No body";
     } else {
       console.error('Data is missing in the response:', fetchInfo);
     }
@@ -57,7 +55,7 @@ export function postTemplate(postData) {
   const postWrapper = document.createElement('div');
   postWrapper.classList.add('post');
 
-  const heading = document.createElement('h3');
+  const heading = document.createElement('h2');
   heading.textContent = postData.title;
 
   const author = document.createElement('p');
@@ -75,6 +73,7 @@ export function postTemplate(postData) {
   const body = document.createElement('p');
   body.textContent = postData.body;
 
+
   const tagsContainer = document.createElement('div');
   tagsContainer.classList.add('tagsContainer');
   postData.tags.forEach(tag => {
@@ -87,6 +86,8 @@ export function postTemplate(postData) {
   postWrapper.append(heading, author, mediaContainer, body, tagsContainer);
   return postWrapper;
 }
+
+
 
 // Function to render the posts on the page
 export function renderPostsTemplate(posts) {

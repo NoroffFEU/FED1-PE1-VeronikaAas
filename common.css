@@ -17,10 +17,18 @@ h2 {
     font-family: "gluten", sans-serif;
 }
 
+.termContainer {
+    display: flex;
+    padding: 5%;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .terms {
     font-family: "montserrat", sans-serif;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 5%;
+    background-color: #fff;
 }
 
 header {

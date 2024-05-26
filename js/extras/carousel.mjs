@@ -1,29 +1,47 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
-const nextButton = document.querySelector('.next');
-const prevButton = document.querySelector('.prev');
 
-function showSlide(index) {
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+export function initateCarousel(){
+
+    const slides = document.querySelectorAll(".carousel-cards");
+    const previous = document.querySelector(".previous");
+    const next = document.querySelector(".next");
+    let slideIndex = 0;
+    let intervalId = null;
+    
+    document.addEventListener("DOMContentLoaded", initializeSlider);
+    previous.addEventListener("click", prevSlide);
+    next.addEventListener("click", nextSlide);
+    
+    function initializeSlider(){
+        if(slides.length > 0){
+            slides[slideIndex].classList.add("displaySlide");
+            intervalId = setInterval(nextSlide, 5000);
+        }
     }
-
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    
+    function showSlide(index){
+        if(index >= slides.length){
+            slideIndex = 0;
+        }
+        else if(index < 0){
+            slideIndex = slides.length - 1;
+        }
+    
+        slides.forEach(slide => {
+            slide.classList.remove("visible");
+            slide.classList.add("hidden");
+          });
+          slides[slideIndex].classList.remove("hidden");
+          slides[slideIndex].classList.add("visible");
+    }
+    
+    function prevSlide(){
+        clearInterval(intervalId);
+        slideIndex--;
+        showSlide(slideIndex);
+    }
+    
+    function nextSlide(){
+        slideIndex++;
+        showSlide(slideIndex);
+    }
 }
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-// Add event listeners
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);

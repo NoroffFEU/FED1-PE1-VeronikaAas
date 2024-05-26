@@ -8,6 +8,9 @@ body {
   
   /* Blog Feed Container */
   .feedContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -18,23 +21,26 @@ body {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   /* Post Heading */
-  .post h2 {
+  .post h1 {
+    font-family: "gluten", sans-serif;
     font-size: 24px;
-    color: #333;
+    color: black;
     margin-top: 0;
   }
   
   /* Post Author */
   .post p {
-    color: #666;
-    font-size: 14px;
+    color: black;
+    font-family: "montserrat", sans-serif;
+    font-size: 1.1rem;
     margin: 10px 0;
+    line-height: 1.5;
+    white-space: pre-line;
   }
   
   /* Media Container */
@@ -52,7 +58,7 @@ body {
   /* Post Body */
   .post .body {
     font-size: 16px;
-    color: #333;
+    color: black;
     margin: 15px 0;
   }
   
@@ -61,17 +67,49 @@ body {
     margin-top: 15px;
   }
   
-  .tag {
+  .read-more-button {
     display: inline-block;
+    background-color: #F2C4B3;
+    font-family: "montserrat", sans-serif;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .read-more-button:hover {
     background-color: #BF8069;
     color: white;
-    padding: 5px 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    font-family: "montserrat", sans-serif;
+    background-color: #F2C4B3;
+    color: white;
+    padding: 5px 5px;
     border-radius: 3px;
     margin-right: 5px;
-    font-size: 14px;
+    font-size: 1rem;
   }
   
   .error-message {
     color: red;
     font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .feedContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feedContainer {
+      grid-template-columns: 1fr;
+    }
   }

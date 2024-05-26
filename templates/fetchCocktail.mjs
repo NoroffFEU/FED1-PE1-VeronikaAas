@@ -19,9 +19,25 @@ async function fetchCocktailPosts() {
     }
 }
 
-export function postTemplate(postData) {
+// Function to create a "Read More" button for a post
+function createReadMoreButton(postId) {
+    const readMoreButton = document.createElement('button');
+    readMoreButton.classList.add('button', 'read-more-button');
+    readMoreButton.textContent = 'Read More';
+    readMoreButton.dataset.postId = postId;
+    readMoreButton.addEventListener('click', (event) => {
+      const postId = event.target.dataset.postId;
+      window.location.href = `singlePost.html?id=${postId}`;
+    });
+    return readMoreButton;
+  }
+  
+  // Function to render a single post template
+  export function postTemplate(postData) {
     const postWrapper = document.createElement('div');
     postWrapper.classList.add('post');
+    // Set the post ID as a data attribute on the post container
+    postWrapper.dataset.postId = postData.id;
   
     const heading = document.createElement('h2');
     heading.textContent = postData.title;
@@ -38,10 +54,6 @@ export function postTemplate(postData) {
       mediaContainer.appendChild(media);
     }
   
-    const body = document.createElement('p');
-    body.textContent = postData.body;
-  
-  
     const tagsContainer = document.createElement('div');
     tagsContainer.classList.add('tagsContainer');
     postData.tags.forEach(tag => {
@@ -51,9 +63,13 @@ export function postTemplate(postData) {
       tagsContainer.appendChild(tagElement);
     });
   
-    postWrapper.append(heading, author, mediaContainer, body, tagsContainer);
+    // Create the "Read More" button and append it to the post container
+    const readMoreButton = createReadMoreButton(postData.id);
+    postWrapper.append(heading, author, mediaContainer, tagsContainer, readMoreButton);
+  
     return postWrapper;
   }
+
 
 // Function to render the posts on the page
 export function renderPostsTemplate(posts) {

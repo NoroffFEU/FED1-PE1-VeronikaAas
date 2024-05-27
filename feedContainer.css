@@ -6,6 +6,14 @@ body {
     box-sizing: border-box;
   }
   
+  .singlePostContainer {
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+
   /* Blog Feed Container */
   .feedContainer {
     display: grid;

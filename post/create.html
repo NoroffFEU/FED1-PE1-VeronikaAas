@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a blogpost</title>
+  <link rel="stylesheet" href="../createPost.css">
+  <link rel="stylesheet" href="../common.css">
+  <script type="module" src="../js/index.mjs" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="Icon" type="png" sizes="16x16" href="../assets/Element1cc.png">
+</head>
+<header>
+    <div class="header">
+        <div class="logoimg">
+            <a href="../index.html"> 
+                <img src="../assets/Element1cc.png" alt="logo of the company">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="../post/create.html">Create a new blogpost</a></li>
+                <li><a href="../index.html">Log out</a></li>
+            </ul>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn1">Menu</button>
+                <div class="dropdown-content">
+                    <a href="../post/create.html">Create a new blogpost</a>
+                    <a href="../index.html" id="logoutLink">Log out</a>
+                </div>
+        </div>
+    </div>
+</header>
+<body>
+    <h1>Write a new blogpost!</h1>
+    <div class="createContainer">
+    <form id="createPost">
+        <div class="username">
+            <label for="">Title</label>
+            <input class="form-control" id="username" type="text" name="title" required 
+            maxlength="280" minlength="1" title="This is where you write the title of your blogpost.">
+        </div>
+
+        <div class="body">
+            <label for="">Ingredients and direction</label>
+            <textarea class="form-control" id="body" type="text" name="body" required 
+            maxlength="100000" title="This is where you write the ingredients and direction."></textarea>
+        </div>
+
+        <div class="tags">
+            <label for="">Tags</label>
+            <input class="form-control" id="tags" type="text" name="tags" title="This is were you write your tags, separate them with , if you write more than one tag">
+        </div>
+
+        <div class="media">
+            <label for="">Media</label>
+            <input class="form-control" id="mediaURL" type="url" name="mediaURL" required title="This is where you put in your image url.">
+        </div>
+        
+        <button id="createButton" class="btn btn-success">Create post</button>
+    </form>
+    </div>
+</body>
+<footer>
+    <nav class="footer">
+        <ul>
+            <li><a href="../post/termsCon.html">Terms and Condition</a></li>
+            <li>Any feedback? Would love to hear from you, email me at: candc@live.no</li>
+        </ul>
+    </nav>
+</footer>
+</html>

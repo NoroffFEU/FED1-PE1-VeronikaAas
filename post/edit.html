@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogfeed</title>
+  <title>Blog editing page</title>
   <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="../createPost.css">
   <link rel="stylesheet" href="../feedContainer.css">
-  <script src="../js/index.mjs" defer type="module"></script>
-  <script src="../templates/singlePost.mjs" defer type="module"></script>
+  <script type="module" src="../js/index.mjs" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
@@ -25,25 +25,50 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="../post/cupcakePosts.html">Cupcakes</a></li>
-                <li><a href="../post/cocktailPosts.html">Cocktails</a></li>
-                <li><a href="../account/login.html">Log in</a></li>
+                <li><a href="../post/edit.html">Edit post</a></li>
+                <li><a href="../post/create.html">Create a new blogpost</a></li>
+                <li><a href="../index.html">Log out</a></li>
             </ul>
         </nav>
         <div class="dropdown">
             <button class="dropbtn1">Menu</button>
                 <div class="dropdown-content">
-                    <a href="../post/cupcakePosts.html">Cupcakes</a>
-                    <a href="../post/cocktailPosts.html">Cocktails</a>
-                    <a href="../account/login.html">Log in</a>
+                    <a href="../post/edit.html">Edit post</a>
+                    <a href="../post/create.html">Create a new blogpost</a>
+                    <a href="../index.html">Log out</a>
                 </div>
         </div>
     </div>
 </header>
 <body>
-    <div class="singlePostContainer">
-        <!-- Single post will be injected here -->
-    </div>
+    <div class="editContainer">
+    <form id="editPost">
+        <div class="username">
+            <label for="">Title</label>
+            <input class="form-control" type="text" name="title" required 
+            maxlength="280" minlength="1" title="This is where you write the title of your blogpost.">
+        </div>
+
+        <div class="body">
+            <label for="">Body</label>
+            <textarea class="form-control" type="text" name="body" required 
+            maxlength="1000" title="This is where you write the body of your blogpost."></textarea>
+        </div>
+
+        <div class="tags">
+            <label for="">Tags</label>
+            <input class="form-control" type="text" name="tags">
+        </div>
+
+        <div class="media">
+            <label for="">Media</label>
+            <input class="form-control" type="url" name="media" required>
+        </div>
+        
+        <button class="updateButton" id="updateButton">Update post</button>
+    </form>
+</div>
+</div>
 </body>
 <footer>
     <nav class="footer">

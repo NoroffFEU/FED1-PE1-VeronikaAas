@@ -1,5 +1,5 @@
 
-import { API_BASE_URL } from "../constants.mjs";
+import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../constants.mjs";
 import { authFetch } from "../api/authFetch.mjs";
 
 const method = "put";
@@ -9,9 +9,9 @@ export async function updatePost(postData) {
         throw new Error("Update requires a postID");
     }
 
-    const updatePostURL = `${API_BASE_URL}${API_ENDPOINT}/${postData.id}`;
+    const updatePostURL = `${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postData.id}`;
     
-    const response = await authFetch(createPostURL, {
+    const response = await authFetch(updatePostURL, {
         method,
         body: JSON.stringify(postData)
     })
@@ -24,3 +24,5 @@ export async function updatePost(postData) {
 
     return await response.json();
 }
+
+updatePost();

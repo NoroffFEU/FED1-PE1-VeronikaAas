@@ -1,7 +1,7 @@
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const feedContainer = document.getElementById('feedContainer');
+    const feedContainer = document.getElementById('adminContainer');
     
     try {
         const response = await fetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}`);
@@ -63,3 +63,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Failed to fetch posts:', error);
     }
 });
+

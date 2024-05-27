@@ -13,6 +13,7 @@ export async function createPost(postData) {
 
     if (response.ok) {
         alert("You have created a post!");
+        window.location.href = `/post/adminFeed.html`
     } else {
         alert("We couldn't create your post, please try again.")
     }

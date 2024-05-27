@@ -8,7 +8,6 @@ async function fetchCocktailPosts() {
         const postList = await response.json();
 
         if (postList.data) {
-            // Filter posts with the tag "cupcake"
             const cocktailPosts = postList.data.filter(post => post.tags.includes("cocktail"));
             renderPostsTemplate(cocktailPosts);
         } else {
@@ -19,7 +18,6 @@ async function fetchCocktailPosts() {
     }
 }
 
-// Function to create a "Read More" button for a post
 function createReadMoreButton(postId) {
     const readMoreButton = document.createElement('button');
     readMoreButton.classList.add('button', 'read-more-button');
@@ -36,7 +34,6 @@ function createReadMoreButton(postId) {
   export function postTemplate(postData) {
     const postWrapper = document.createElement('div');
     postWrapper.classList.add('post');
-    // Set the post ID as a data attribute on the post container
     postWrapper.dataset.postId = postData.id;
   
     const heading = document.createElement('h2');
@@ -63,15 +60,12 @@ function createReadMoreButton(postId) {
       tagsContainer.appendChild(tagElement);
     });
   
-    // Create the "Read More" button and append it to the post container
     const readMoreButton = createReadMoreButton(postData.id);
     postWrapper.append(heading, author, mediaContainer, tagsContainer, readMoreButton);
   
     return postWrapper;
   }
 
-
-// Function to render the posts on the page
 export function renderPostsTemplate(posts) {
     const blogFeed = document.querySelector(".feedContainer");
     if (!blogFeed) {

@@ -17,7 +17,7 @@ const fetchAndDisplayPost = async (postId) => {
 
   try {
     const fetchInfo = await authFetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`);
-    console.log(fetchInfo);
+
 
     if (fetchInfo.data) {
       const mediaURL = document.querySelector(".mediaURL");
@@ -39,7 +39,6 @@ const fetchAndDisplayPost = async (postId) => {
   }
 };
 
-// Function to create a "Read More" button for a post
 function createReadMoreButton(postId) {
   const readMoreButton = document.createElement('button');
   readMoreButton.classList.add('button', 'read-more-button');
@@ -56,7 +55,6 @@ function createReadMoreButton(postId) {
 export function postTemplate(postData) {
   const postWrapper = document.createElement('div');
   postWrapper.classList.add('post');
-  // Set the post ID as a data attribute on the post container
   postWrapper.dataset.postId = postData.id;
 
   const heading = document.createElement('h2');
@@ -83,7 +81,6 @@ export function postTemplate(postData) {
     tagsContainer.appendChild(tagElement);
   });
 
-  // Create the "Read More" button and append it to the post container
   const readMoreButton = createReadMoreButton(postData.id);
   postWrapper.append(heading, author, mediaContainer, tagsContainer, readMoreButton);
 

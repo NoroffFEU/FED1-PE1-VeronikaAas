@@ -17,10 +17,9 @@ const fetchAndDisplayPost = async (postId) => {
   try {
     const response = await authFetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`);
     const data = await response.json();
-    console.log("API Response:", data); // Log the entire response
 
     if (data && data.data) {
-      const post = data.data; // Adjusted to access the nested data object
+      const post = data.data;
 
       const singlePostContainer = document.querySelector(".singlePostContainer");
 
@@ -43,7 +42,7 @@ const fetchAndDisplayPost = async (postId) => {
       }
 
       const body = document.createElement('p');
-      body.innerHTML = post.body || "No body"; // Using innerHTML to support HTML content
+      body.innerHTML = post.body || "No body"; 
 
       const tagsContainer = document.createElement('div');
       tagsContainer.classList.add('tagsContainer');

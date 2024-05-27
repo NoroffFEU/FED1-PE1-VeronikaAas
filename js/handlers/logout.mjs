@@ -16,3 +16,5 @@ export function logout() {
     remove("account");
     remove("token");
 }
+
+logout();

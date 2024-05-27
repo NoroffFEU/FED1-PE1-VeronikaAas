@@ -47,7 +47,7 @@ function createReadMoreButton(postId) {
   readMoreButton.dataset.postId = postId;
   readMoreButton.addEventListener('click', (event) => {
     const postId = event.target.dataset.postId;
-    window.location.href = `singlePost.html?id=${postId}`;
+    window.location.href = `posts/singlePost.html?id=${postId}`;
   });
   return readMoreButton;
 }

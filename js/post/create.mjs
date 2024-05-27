@@ -19,11 +19,3 @@ export async function createPost(postData) {
 
     return await response.json();
 }
-
-import { isLoggedIn } from '../extras/isLoggedIn.mjs';
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  if (!isLoggedIn()) {
-    window.location.href = 'profile/login/index.html'; // Redirect to login page if not logged in
-  }
-});

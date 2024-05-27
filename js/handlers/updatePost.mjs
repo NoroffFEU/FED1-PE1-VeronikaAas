@@ -5,7 +5,7 @@ export async function setUpdatePostListener () {
     const form = document.querySelector("#editPost");
 
     const url = new URL (location.href);
-    const id = url.searchParams.get("id");
+    const id = url.searchParams.get("postId")
 
     if (form) {
         const button = form.querySelector("button");
@@ -34,6 +34,3 @@ export async function setUpdatePostListener () {
         })
     }
 }
-
-
-getPost(id);

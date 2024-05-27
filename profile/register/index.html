@@ -6,7 +6,7 @@
   <title>Register user</title>
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="/createPost.css">
-  <script src="/js/index.mjs" defer type="module"></script>
+  <script src="/js/handlers/register.mjs" defer type="module"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
@@ -45,17 +45,17 @@
         <form id="registerForm">
             <div class="username">
                 <label for="">Username</label>
-                    <input class="form-control" type="username" name="username" required pattern="^[\w]+$"
+                    <input class="form-control" type="username" name="username" id="username" required pattern="^[\w]+$"
                     maxlength="20" title="This will be your Author name. It can only consist of uppercase or lowercase letters, but it can also have numbers and underscores.">
             </div>
             <div class="email">
                 <label for="">Email</label>
-                    <input class="form-control" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Please use your student/employer email from Noroff. Example: abc123@stud.noroff.no">
+                    <input class="form-control" type="email" name="email" id="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="Please use your student/employer email from Noroff. Example: abc123@stud.noroff.no">
             </div>
                 
             <div class="password">
                 <label for="password">Password</label>
-                    <input class="form-control" type="password" name="password" required minlength="8">
+                    <input class="form-control" type="password" name="password" id="password" required minlength="8">
             </div>
 
             <button class="btn btn-success">Register</button>

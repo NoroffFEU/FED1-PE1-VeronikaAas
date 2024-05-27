@@ -1,5 +1,5 @@
 import { updatePost } from "../post/update.mjs";
-import { getPosts } from "../post/read.mjs";
+import { getPost } from "../post/read.mjs";
 
 export async function setUpdatePostListener () {
     const form = document.querySelector("#editPost");
@@ -36,4 +36,4 @@ export async function setUpdatePostListener () {
 }
 
 
-getPosts();
+getPost(id);

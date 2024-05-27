@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         const deleteResponse = await fetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`, {
                             method: 'DELETE',
                             headers: {
-                                'Authorization': `Bearer ${localStorage.getItem('key')}`
+                                'Authorization': `Bearer ${localStorage.getItem('token')}`
                             }
                         });
 

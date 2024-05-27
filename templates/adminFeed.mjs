@@ -1,10 +1,8 @@
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
-import { getPosts } from "../js/post/read.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const feedContainer = document.getElementById('feedContainer');
     
-    // Hent blogginnleggene fra API
     try {
         const response = await fetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}`);
         if (!response.ok) {
@@ -12,7 +10,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         const responseData = await response.json();
 
-        // Sjekk om data inneholder data array
         if (responseData && Array.isArray(responseData.data)) {
             const posts = responseData.data;
             // Generer HTML for hvert innlegg
@@ -43,10 +40,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const confirmed = confirm('Are you sure you want to delete this post?');
 
                     if (confirmed) {
-                        const deleteResponse = await fetch(`${API_BASE_URL}/posts/${postId}`, {
+                        const deleteResponse = await fetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`, {
                             method: 'DELETE',
                             headers: {
-                                'Authorization': `Bearer ${localStorage.getItem('token')}`
+                                'Authorization': `Bearer ${localStorage.getItem('key')}`
                             }
                         });
 

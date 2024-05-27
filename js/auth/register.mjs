@@ -12,9 +12,11 @@ export async function register(profile) {
         },
         method,
         body: JSON.stringify(profile)
+        
 });
 
 const result = await response.json();
 alert("You are now registered");
 return result;
+
 }

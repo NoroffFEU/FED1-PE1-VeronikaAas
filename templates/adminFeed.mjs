@@ -1,3 +1,4 @@
+import { authFetch } from "../js/api/authFetch.mjs";
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -12,21 +13,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (responseData && Array.isArray(responseData.data)) {
             const posts = responseData.data;
-            // Generer HTML for hvert innlegg
+            // Generate HTML for each post
             posts.forEach(post => {
                 const postElement = document.createElement('div');
                 postElement.classList.add('post');
                 postElement.innerHTML = `
                     <h2>${post.title}</h2>
                     <p>Author: ${post.author.name}</p>
-                    ${post.media.url ? `<img src="${post.media.url}" alt="">` : ''}
+                    ${post.media && post.media.url ? `<img src="${post.media.url}" alt="">` : ''}
                     <p>Tags: ${post.tags.join(', ')}</p>
                     <button class="edit-btn" data-id="${post.id}">Edit</button>
                     <button class="delete-btn" data-id="${post.id}">Delete</button>`;
                 feedContainer.appendChild(postElement);
             });
 
-            // Legg til event listeners for edit og delete knappene
+            // Add event listeners for edit and delete buttons
             document.querySelectorAll('.edit-btn').forEach(button => {
                 button.addEventListener('click', (event) => {
                     const postId = event.target.getAttribute('data-id');
@@ -40,18 +41,23 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const confirmed = confirm('Are you sure you want to delete this post?');
 
                     if (confirmed) {
-                        const deleteResponse = await fetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`, {
-                            method: 'DELETE',
-                            headers: {
-                                'Authorization': `Bearer ${localStorage.getItem('token')}`
-                            }
-                        });
+                        try {
+                            const deleteResponse = await authFetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                                }
+                            });
 
-                        if (deleteResponse.ok) {
-                            alert('Post deleted');
-                            window.location.reload(); // Reload siden for å oppdatere listen
-                        } else {
+                            if (deleteResponse.ok) {
+                                alert('Post deleted');
+                                window.location.reload(); // Reload the page to update the list
+                            } else {
+                                throw new Error('Failed to delete post');
+                            }
+                        } catch (error) {
                             alert('Failed to delete post');
+                            console.error('Error deleting post:', error);
                         }
                     }
                 });

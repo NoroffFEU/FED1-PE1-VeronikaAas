@@ -2,21 +2,21 @@ import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../con
 import { authFetch } from "../api/authFetch.mjs";
 
 
-const method = "delete";
+const method = "DELETE";
 
 export async function removePost(id) {
     if (!id){
         throw new Error("Delete requires a post ID");
     }
     
-    const deletePostURL = `${API_BASE_URL} ${API_ENDPOINT_BLOG_POSTS} ${API_ENDPOINT_NAME}/${id}`;
+    const removePostURL = `${API_BASE_URL} ${API_ENDPOINT_BLOG_POSTS} ${API_ENDPOINT_NAME}/${id}`;
 
-    const response = await authFetch(deletePostURL, {
+    const removePost = await authFetch(removePostURL, {
         method
     })
 
     
     alert("You have deleted the post");
-
+    window.location.href = `/post/adminFeed.html?id=${id}`;
 
 }

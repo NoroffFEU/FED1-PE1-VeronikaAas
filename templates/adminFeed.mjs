@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.querySelectorAll('.edit-btn').forEach(button => {
                 button.addEventListener('click', (event) => {
                     const postId = event.target.getAttribute('data-id');
-                    window.location.href = `../postedit/index.html?postId=${postId}`;
+                    window.location.href = `../post/edit.html?postId=${postId}`;
                 });
             });
 

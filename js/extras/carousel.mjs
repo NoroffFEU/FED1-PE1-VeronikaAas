@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     carouselItem.append(image, title);
 
     carouselItem.addEventListener('click', () => {
-      window.location.href = `posts/singlePost.html?id=${postData.id}`;
+      window.location.href = `post/index.html?id=${postData.id}`;
     });
 
     return carouselItem;

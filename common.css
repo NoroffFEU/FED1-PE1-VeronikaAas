@@ -10,6 +10,7 @@ body {
 
 h1 {
     padding-top: 2%;
+    padding: 10px;
     font-family: "gluten", sans-serif;
     display: flex;
     align-items: center;
@@ -18,6 +19,7 @@ h1 {
 
 h2 {
     font-family: "gluten", sans-serif;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;

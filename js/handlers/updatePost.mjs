@@ -36,7 +36,7 @@ export async function setUpdatePostListener () {
             try {
                 await updatePost(updatedPost);
                 alert('Post updated successfully');
-                window.location.href = `/post/adminFeed.html?id=${id}`;
+                window.location.href = `/FED1-PE1-VeronikaAas/post/adminFeed.html?id=${id}`;
             } catch (error) {
                 console.error('Failed to update post:', error);
                 alert('Failed to update post');

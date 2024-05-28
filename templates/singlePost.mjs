@@ -1,6 +1,5 @@
 import { authFetch } from "../js/api/authFetch.mjs";
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
-import { findPostID } from "../js/extras/findPostID.mjs";
 
 // Extract query parameter 'postId' from the URL
 const parameterString = window.location.search;
@@ -81,5 +80,3 @@ const fetchAndDisplayPost = async (id) => {
     document.querySelector(".error-message").innerText = "Error fetching data.";
   }
 };
-
-findPostID();

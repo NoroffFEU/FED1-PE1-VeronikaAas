@@ -18,7 +18,7 @@ const fetchAndDisplayPost = async (id) => {
   }
 
   try {
-    const response = await authFetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${id}`);
+    const response = await authFetch(`${API_BASE_URL}${API_ENDPOINT_BLOG_POSTS}${API_ENDPOINT_NAME}/${postId}`);
     if (!response.ok) {
       throw new Error('Failed to fetch post data');
     }

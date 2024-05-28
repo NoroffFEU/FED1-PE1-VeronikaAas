@@ -15,8 +15,4 @@ export async function removePost(id) {
         method
     })
 
-    
-    alert("You have deleted the post");
-    window.location.href = `/post/adminFeed.html?id=${id}`;
-
 }

@@ -17,4 +17,3 @@ export function logout() {
     remove("token");
 }
 
-logout();

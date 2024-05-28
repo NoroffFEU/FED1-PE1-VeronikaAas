@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutLink.addEventListener('click', (event) => {
             event.preventDefault(); 
             logout(); 
-            window.location.href = 'index.html'; 
+            window.location.href = '/FED1-PE1-VeronikaAas/index.html'; 
         });
     }
 });

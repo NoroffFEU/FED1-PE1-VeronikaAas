@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     carouselItem.append(image, title);
 
     carouselItem.addEventListener('click', () => {
-      window.location.href = `post/index.html?id=${postData.id}`;
+      window.location.href = `/FED1-PE1-VeronikaAas/post/index.html?id=${postData.id}`;
     });
 
     return carouselItem;

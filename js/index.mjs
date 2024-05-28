@@ -12,7 +12,7 @@ const isLoggedIn = checkLogin();
 if (isLoggedIn) {
   const adminLink = document.getElementById("adminLink");
   if (adminLink) {
-    adminLink.innerHTML = `<a href="/post/adminFeed.html">Adminfeed</a>`;
+    adminLink.innerHTML = `<a href="/FED1-PE1-VeronikaAas/post/adminFeed.html">Adminfeed</a>`;
   }
 }
 

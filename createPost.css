@@ -43,6 +43,8 @@
 .loginForm {
     background-color: #BF8069;
     padding: 10%;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;
@@ -55,6 +57,8 @@
 .registerForm {
     background-color: #BF8069;
     padding: 10%;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;

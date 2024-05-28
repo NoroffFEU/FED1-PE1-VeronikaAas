@@ -1,6 +1,7 @@
 import { authFetch } from "../js/api/authFetch.mjs";
 import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/constants.mjs";
 import { getPosts } from "../js/post/read.mjs";
+import { formatDate } from "../js/extras/formatDate.mjs";
 
 // Extract query parameter 'id' from the URL
 const parameterString = window.location.search;
@@ -63,8 +64,10 @@ export function postTemplate(postData) {
   const author = document.createElement('p');
   author.textContent = `By: ${postData.author.name}`;
   
-  const publicationDate = document.createElement('p');
-  publicationDate.textContent = `Publication date: ${postData.created.publicationDate}`
+  const dateElement = document.createElement('p');
+  const formattedDate = formatDate(postData.created);
+  dateElement.innerText = `${formattedDate}`;
+
 
   const mediaContainer = document.createElement('div');
   mediaContainer.classList.add('media-container');
@@ -85,7 +88,7 @@ export function postTemplate(postData) {
   });
 
   const readMoreButton = createReadMoreButton(postData.id);
-  postWrapper.append(heading, author, publicationDate, mediaContainer, tagsContainer, readMoreButton);
+  postWrapper.append(heading, author, dateElement, mediaContainer, tagsContainer, readMoreButton);
 
   return postWrapper;
 }

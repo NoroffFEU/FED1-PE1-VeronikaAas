@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutLink.addEventListener('click', (event) => {
             event.preventDefault(); 
             logout(); 
-            window.location.href = '/posts/index.html'; 
+            window.location.href = 'index.html'; 
         });
     }
 });

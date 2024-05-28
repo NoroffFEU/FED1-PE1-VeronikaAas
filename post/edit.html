@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../feedContainer.css">
 
     <script type="module" src="../js/index.mjs" defer></script>
+    <script src="../js/handlers/logout.mjs" defer type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,7 @@
             <ul>
                 <li><a href="../post/adminFeed.html">Admin feed</a></li>
                 <li><a href="../post/create.html">Create a new blogpost</a></li>
-                <li><a href="../index.html">Log out</a></li>
+                <li><a href="../index.html" id="logoutLink">Log out</a></li>
             </ul>
         </nav>
         <div class="dropdown">
@@ -40,7 +41,7 @@
                 <div class="dropdown-content">
                     <a href="../post/adminFeed.html">Admin feed</a>
                     <a href="../post/create.html">Create a new blogpost</a>
-                    <a href="../index.html">Log out</a>
+                    <a href="../index.html" id="logoutLink">Log out</a>
                 </div>
         </div>
     </div>

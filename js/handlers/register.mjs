@@ -13,6 +13,7 @@ export function setRegisterFormListener () {
     
             register(profile)
             alert("You are now registered");
+            window.location.href = `/FED1-PE1-VeronikaAas/account/login.html`
         });
     }
 }

@@ -4,7 +4,7 @@ import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/
 // Extract query parameter 'postId' from the URL
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
-const postId = searchParameters.get("postId");
+const postId = searchParameters.get("id");
 
 // Function to fetch and display single post data
 const fetchAndDisplayPost = async (id) => {
@@ -80,3 +80,5 @@ const fetchAndDisplayPost = async (id) => {
     document.querySelector(".error-message").innerText = "Error fetching data.";
   }
 };
+
+fetchAndDisplayPost();

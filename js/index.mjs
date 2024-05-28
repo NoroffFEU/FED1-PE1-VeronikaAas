@@ -1,6 +1,6 @@
 import * as listeners from "./handlers/index.mjs";
 import { getPosts } from "../js/post/read.mjs";
-import { checkLogin } from "./auth/checkLogIn.mjs";
+import { checkLogin } from "./auth/checkLogin.mjs";
 
 listeners.setLoginFormListener();
 listeners.setCreatePostListener();

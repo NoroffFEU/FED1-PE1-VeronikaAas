@@ -62,6 +62,9 @@ export function postTemplate(postData) {
 
   const author = document.createElement('p');
   author.textContent = `By: ${postData.author.name}`;
+  
+  const publicationDate = document.createElement('p');
+  publicationDate.textContent = `Publication date: ${postData.created.publicationDate}`
 
   const mediaContainer = document.createElement('div');
   mediaContainer.classList.add('media-container');
@@ -82,7 +85,7 @@ export function postTemplate(postData) {
   });
 
   const readMoreButton = createReadMoreButton(postData.id);
-  postWrapper.append(heading, author, mediaContainer, tagsContainer, readMoreButton);
+  postWrapper.append(heading, author, publicationDate, mediaContainer, tagsContainer, readMoreButton);
 
   return postWrapper;
 }

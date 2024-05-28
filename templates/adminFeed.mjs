@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 postElement.innerHTML = `
                     <h2>${post.title}</h2>
                     <p>Author: ${post.author.name}</p>
-                    ${post.media && post.media.url ? `<img src="${post.media.url}" alt="">` : ''}
-                    <p>Tags: ${post.tags.join(', ')}</p>
+                        <div class="media-container">
+                    ${post.media && post.media.url ? `<img src="${post.media.url}" alt="">` : ''}</div>
+                    <div class="tagsContainer">Tags: ${post.tags.join(', ')}</p>
                     <button class="edit-btn" data-id="${post.id}">Edit</button>
                     <button class="delete-btn" data-id="${post.id}">Delete</button>`;
                 feedContainer.appendChild(postElement);

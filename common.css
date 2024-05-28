@@ -11,6 +11,9 @@ body {
 h1 {
     padding-top: 2%;
     font-family: "gluten", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {

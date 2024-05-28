@@ -41,7 +41,6 @@
 }
 
 .loginForm {
-    width: 80vw;;
     background-color: #BF8069;
     padding: 10%;
     margin-top: 30px; 
@@ -54,7 +53,6 @@
 }
 
 .registerForm {
-    width: 80vw;
     background-color: #BF8069;
     padding: 10%;
     margin-top: 30px; 

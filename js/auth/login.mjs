@@ -29,7 +29,7 @@ export async function login(profile) {
 
         alert("You are now logged in");
 
-        window.location.href = '../FED1-PE1-VeronikaAas/post/adminFeed.html'; 
+        window.location.href = '../post/adminFeed.html'; 
 
     } catch (error) {
         console.error('Error logging in:', error);

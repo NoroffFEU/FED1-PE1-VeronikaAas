@@ -41,7 +41,7 @@
 }
 
 .loginForm {
-    width: 100%;
+    width: 80vw;;
     background-color: #BF8069;
     padding: 10%;
     margin-top: 30px; 
@@ -54,7 +54,7 @@
 }
 
 .registerForm {
-    width: 100%;
+    width: 80vw;
     background-color: #BF8069;
     padding: 10%;
     margin-top: 30px; 
@@ -67,7 +67,7 @@
 }
 
 .editPost {
-    width: 50%;
+    width: 80vw;
     background-color: #BF8069;
     padding: 20px;
     margin-top: 30px; 

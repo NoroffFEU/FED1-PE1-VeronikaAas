@@ -27,7 +27,6 @@
 }
 
 .register-button {
-    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     color: white;
@@ -37,6 +36,9 @@
     text-decoration: none; 
     text-align: center;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .register-button:hover {
@@ -45,29 +47,29 @@
 }
 
 .loginForm {
-    width: 50%;
+    width: 100%;
     background-color: #BF8069;
-    padding: 5%;
+    padding: 10%;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .registerForm {
-    width: 50%;
+    width: 100%;
     background-color: #BF8069;
-    padding: 5%;
+    padding: 10%;
     margin-top: 30px; 
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .editPost {

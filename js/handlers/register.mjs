@@ -12,8 +12,8 @@ export function setRegisterFormListener () {
             const profile = Object.fromEntries(formData.entries())
     
             register(profile)
+            alert("You are now registered");
         });
     }
 }
-
 setRegisterFormListener(); 

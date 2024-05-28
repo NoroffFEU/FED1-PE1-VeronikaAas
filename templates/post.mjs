@@ -63,6 +63,9 @@ export function postTemplate(postData) {
   const author = document.createElement('p');
   author.textContent = `By: ${postData.author.name}`;
 
+  const created = document.createElement('p')
+  created.textContent = `Date: ${postData.date.created}`
+
   const mediaContainer = document.createElement('div');
   mediaContainer.classList.add('media-container');
   if (postData.media && postData.media.url) {
@@ -82,7 +85,7 @@ export function postTemplate(postData) {
   });
 
   const readMoreButton = createReadMoreButton(postData.id);
-  postWrapper.append(heading, author, mediaContainer, tagsContainer, readMoreButton);
+  postWrapper.append(heading, author, created, mediaContainer, tagsContainer, readMoreButton);
 
   return postWrapper;
 }

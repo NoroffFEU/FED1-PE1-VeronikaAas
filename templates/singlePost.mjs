@@ -4,7 +4,7 @@ import { API_BASE_URL, API_ENDPOINT_BLOG_POSTS, API_ENDPOINT_NAME } from "../js/
 // Extract query parameter 'id' from the URL
 const parameterString = window.location.search;
 const searchParameters = new URLSearchParams(parameterString);
-const postId = searchParameters.get("id");
+const postId = searchParameters.get("postId");
 
 // Function to fetch and display single post data
 const fetchAndDisplayPost = async (postId) => {

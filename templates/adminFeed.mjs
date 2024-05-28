@@ -69,4 +69,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Failed to fetch posts:', error);
     }
 });
-
